@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install .NET and start project
+    init: dotnet new webapp -o MyWebApp
+    command: |
+      cd MyWebApp && dotnet run
+
+ports:
+  - port: 5000
+    onOpen: open-preview
